@@ -3,7 +3,7 @@ name: Deploy Django to AWS EC2
 on:
   push:
     branches:
-      - main  # Deploy when changes are pushed to the main branch
+      - main
 
 jobs:
   deploy:
@@ -36,7 +36,7 @@ jobs:
         port: 22
         script: |
           # Navigate to the project directory
-          cd /path/to/your/project
+          cd /home/ec2-user/priceactionrepository
 
           # Pull the latest changes
           git pull origin main
